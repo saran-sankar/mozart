@@ -25,11 +25,8 @@ max_corr = 0;
 pos = 0;
 
 for i=200000:1000:1000000
-    
     g = z(i:i+length,1);
-    
     corr = corr_fft(f,g);
-    
     if sum(corr) > max_corr
         max_corr = sum(corr);
         pos = i;
